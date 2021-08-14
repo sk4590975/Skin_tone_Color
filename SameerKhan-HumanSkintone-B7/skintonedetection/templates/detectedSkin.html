@@ -1,0 +1,107 @@
+{% extends "home.html" %}
+{% load static %}
+{% block body_block %}
+
+
+
+
+<!---
+<div class="uploader">
+
+
+
+
+                <script>
+                    const inpfile = document.getElementById("inpfile");
+                    const previewContainer = document.getElementById("imagePreview");
+                    const previewImage = previewContainer.querySelector(".image-preview__image");
+                    const previewDefaultText = previewContainer.querySelector(".image-preview__default-text");
+
+                    inpfile.addEventListener("change", function() {
+                        const file = this.files[0];
+
+                        console.log(file);
+
+                        if (file) {
+                            const reader = new FileReader();
+
+                            previewDefaultText.style.display = "none";
+                            previewImage.style.display = "block";
+
+                            reader.addEventListener("load", function() {
+                                console.log(this);
+                                previewImage.setAttribute("src", this.result);
+
+                            });
+                            reader.readAsDataURL(file);
+                        }
+                    });
+                </script>
+                <div>
+ <a style class="btn btn-light" href="{% url 'captureimage'%}" role="button">Capture Image</a>
+</div>
+---->
+
+
+
+	<section id="testimonials1">
+			 <div class="container">
+			<div class="row">
+
+				 <div class="col-md-6 rep">
+                <div  style="text-align:center;"><h1>{{Result1}}</h1></div>
+
+						 </div>
+             <div class="col-md-6 ">
+       				<div class="wrapper">
+
+       				<div class="image-preview" id="imagePreview">
+        					 <img src=" " alt="Image Preview" class="image-preview__image">
+                  <span class="image-preview__default-text "><div class="icon"><i class="fa fa-upload" aria-hidden="true"></i></div></span>
+               </div>
+
+        			 	</div>
+               <form method="post" enctype="multipart/form-data" action = "result">
+                 <div >
+                 	    {% csrf_token %}
+                      <input class="input-file" id="inpfile" type="file" name="Choose file" style="padding-left:10px; margin-top:20px;">
+                      </div>
+
+                     <input type="submit" class="btn btn-primary" style="margin-left:150px; margin-top:20px;" >
+
+               </form>
+          </div>
+							</div>
+							</div>
+
+			</section>
+
+
+
+<script>
+             const inpfile = document.getElementById("inpfile");
+             const previewContainer = document.getElementById("imagePreview");
+             const previewImage = previewContainer.querySelector(".image-preview__image");
+             const previewDefaultText = previewContainer.querySelector(".image-preview__default-text");
+
+             inpfile.addEventListener("change", function() {
+                 const file = this.files[0];
+
+                 console.log(file);
+
+                 if (file) {
+                     const reader = new FileReader();
+
+                     previewDefaultText.style.display = "none";
+                     previewImage.style.display = "block";
+
+                     reader.addEventListener("load", function() {
+                         console.log(this);
+                         previewImage.setAttribute("src", this.result);
+
+                     });
+                     reader.readAsDataURL(file);
+                 }
+             });
+         </script>
+{% endblock %}

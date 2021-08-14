@@ -1,0 +1,171 @@
+{% extends "home.html" %}
+{% load static %}
+{% block body_block %}
+<link rel="stylesheet" type="text/css" href="{% static 'skintonedetection/css/style.css' %}">
+<!-------about us------->
+<section id="testimonials">
+    <div class="container">
+	 <h1 class="head">About Us</h1>
+	 <div class="row">
+		 <div class="col-md-6 text-center">
+		 <div class="profile">
+			 <h3>Human Skin Color Detection</h3>
+		 <blockquote>Skin detection is the process of finding skin-colored pixels and regions in an image or a video. This process is typically used as a preprocessing step to find regions that potentially have human faces and limbs in images. Skin image recognition
+	                is used in a wide range of image processing applications like face recognition, skin disease detection, gesture tracking and human-computer interaction. The primary key for skin recognition from an image is the skin color. But color cannot
+	                be the only deciding factor due to the variation in skin tone according to different races. Other factors such as the light conditions also affect the results. Therefore, the skin tone is often combined with other cues like texture and
+	                edge features. This is achieved by breaking down the image into individual pixels and classifying them into skin colored and non-skin colored.</blockquote>
+
+		 </div>
+		 </div>
+	 <div class="col-md-6 text-center">
+	 <div class="profile definition">
+		 <h3>How do you know about skin color?</h3>
+	 <blockquote>In natural light, check the appearance of your veins beneath your skin.<br> 1. If your veins appear blue or purple, you have a cool skin tone.<br> 2. If your veins look green or a greenish blue, you have a warm skin tone.<br> 3. If you can't
+            tell whether or not your veins are green or blue, you probably have a neutral skin tone.</blockquote>
+
+	 </div>
+	 </div>
+   </div>
+   <div class="row">
+		 <div class="col-md-6 text-center">
+		 <div class="profile">
+			 <h3>What we do?</h3>
+		 <blockquote>human skin detection is used as baseline for comparing results. The images in this dataset are uploaded by you for skin color detection. These images are captured with a range of different cameras using different colour enhancement and under
+                different illuminations. The dataset also contains Ground Truth images for sample images in dataset.<br>
+                Additionally some sample images were collected from internet. Fig.shows the results obtained from the algorithm on sample images. The bar chart is represents the number of skin pixels detected in the three different color spaces RGB for three
+                images respectively 6a)-6c). All three color spaces are almost equally contributing in the process of skin pixel identification.</blockquote>
+
+		 </div>
+		 </div>
+	 <div class="col-md-6 text-center">
+	 <div class=" image ">
+     <img  src="{% static 'skintonedetection/images/child.png'%}" alt="">
+
+	 </div>
+	 </div>
+   </div>
+<!---
+	 <div class="row">
+		 <div class="col-md-4 text-center">
+		 <div class="profile">
+			 <h3>What we do?</h3>
+		 <blockquote>human skin detection is used as baseline for comparing results. The images in this dataset are uploaded by you for skin color detection. These images are captured with a range of different cameras using different colour enhancement and under
+                different illuminations. The dataset also contains Ground Truth images for sample images in dataset.<br>
+                Additionally some sample images were collected from internet. Fig.shows the results obtained from the algorithm on sample images. The bar chart is represents the number of skin pixels detected in the three different color spaces RGB for three
+                images respectively 6a)-6c). All three color spaces are almost equally contributing in the process of skin pixel identification.</blockquote>
+
+		 </div>
+		 </div>
+	 <div class="col-md-4 text-center">
+<div class="profile definition">
+	 <img  src="{% static 'skintonedetection/images/child.png'%}" alt="">
+
+	 </div>
+	 </div>
+---->
+
+	 </div>
+    </div>
+</section>
+<!------about us------>
+{% endblock %}
+
+
+
+<!----
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orelega+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>About us</title>
+</head>
+
+<body>
+    <div class="Container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+
+
+            <img src="" alt="" height="80px" width="200px">
+
+            <a class="navbar-brand" href="#">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto" style="font-size: 20px;">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="">Home</a>
+                    </li>
+                    <li class="nav-item dropdown active">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Know More
+                  </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                            <a class="dropdown-item" href="#">About Us</a>
+                            <a class="dropdown-item" href="">Learn More<br>(about SkinTones)</a>
+                            </div>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+
+        </nav>
+
+        <h1 style="
+        color:white;
+        background-color: darkgray;
+        margin-bottom: -11px;
+        border-bottom: 5px solid black;"> &nbsp; &nbsp; About Us </h1>
+
+        <br>
+        <br>
+
+        <div class="container">
+
+            <h2>Human Skin Color Detection</h2>
+            <p>Skin detection is the process of finding skin-colored pixels and regions in an image or a video. This process is typically used as a preprocessing step to find regions that potentially have human faces and limbs in images. Skin image recognition
+                is used in a wide range of image processing applications like face recognition, skin disease detection, gesture tracking and human-computer interaction. The primary key for skin recognition from an image is the skin color. But color cannot
+                be the only deciding factor due to the variation in skin tone according to different races. Other factors such as the light conditions also affect the results. Therefore, the skin tone is often combined with other cues like texture and
+                edge features. This is achieved by breaking down the image into individual pixels and classifying them into skin colored and non-skin colored.</p>
+
+            <h3>How do you know about skin color?</h3>
+            In natural light, check the appearance of your veins beneath your skin.<br> 1. If your veins appear blue or purple, you have a cool skin tone.<br> 2. If your veins look green or a greenish blue, you have a warm skin tone.<br> 3. If you can't
+            tell whether or not your veins are green or blue, you probably have a neutral skin tone.
+            <h2> What we do?</h2>
+            <p>human skin detection is used as baseline for comparing results. The images in this dataset are uploaded by you for skin color detection. These images are captured with a range of different cameras using different colour enhancement and under
+                different illuminations. The dataset also contains Ground Truth images for sample images in dataset.</p>
+            <p>Additionally some sample images were collected from internet. Fig.shows the results obtained from the algorithm on sample images. The bar chart is represents the number of skin pixels detected in the three different color spaces RGB for three
+                images respectively 6a)-6c). All three color spaces are almost equally contributing in the process of skin pixel identification. </p>
+            <center><img src="" height="400px" width="400px" class="img-fluid" alt="Image not found"></center>
+        </div>
+    </div>
+</body>
+<hr>
+<footer>
+    <div class="footer-content" style=" text-align: center;">
+        © Copyright 2021, Skin Color Detection<br>
+        <a style="color:cadetblue;" h">Disclaimer</a> |
+        <a style="color:cadetblue;" href="">Contact Us</a>
+
+    </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+
+</html>----->

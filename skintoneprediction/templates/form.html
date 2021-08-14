@@ -1,0 +1,83 @@
+{% extends "index.html" %}
+{% load static %}
+{% block body_block %}
+
+<!---<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">--->
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<section id="contact">
+	<div class="container">
+		<h1>Skin Tone</h1>
+		<div class="row">
+			<div class="col-md-6">
+        <div class="profile conm">
+
+				<h4 id="details">Enter the details</h4>
+			<form class="contact-form" action="result"  onsubmit="clickme()" >
+         <!---<div class="form-group">
+					<input type="text" id="abc" class="form-control" placeholder="Your-name" required>
+				</div>
+				<div class="form-group">
+					<input type="email"  id="abcd" class="form-control" placeholder="email-id" required>
+				</div>---->
+        <button  onclick="defaultBtnActive()"id="custom-btn" >Upload Image</button>
+        <!----<button type="submit" class="btn btn-primary" onclick="clickme()">Submit</button><span id="contact1"></span>--->
+			</form>
+			</div>
+      </div>
+			<div class="col-md-6 contact-info">
+        <div class=" form1 profile">
+          <div class="wrapper conm">
+            <div class="image">
+            <img src="" alt="">
+            </div>
+            <div class="content1">
+              <div class="icon">
+                <i class="fa fa-upload" aria-hidden="true"></i>
+              </div>
+              <div class="text">No file chosen ,yet</div>
+            </div>
+            <div id="cancel-btn"><i class="fas fa-times"></i></div>
+            <div class="file-name">File name here</div>
+          </div>
+          <input id="default-btn" type="file" hidden>
+          <<h1>Result:{{result2}}</h1>
+        </div>
+			</div>
+		</div>
+	</div>
+
+</section>
+<script>
+  const wrapper = document.querySelector(".wrapper");
+      const fileName = document.querySelector(".file-name");
+      const defaultBtn = document.querySelector("#default-btn");
+      const customBtn = document.querySelector("#custom-btn");
+      const cancelBtn = document.querySelector("#cancel-btn i");
+      const img = document.querySelector("img");
+      let regExp = /[0-9a-zA-Z\^\&\'\@\{\}\[\]\,\$\=\!\-\#\(\)\.\%\+\~\_ ]+$/;
+      function defaultBtnActive(){
+        defaultBtn.click();
+      }
+      defaultBtn.addEventListener("change", function(){
+        const file = this.files[0];
+        if(file){
+          const reader = new FileReader();
+          reader.onload = function(){
+            const result = reader.result;
+            img.src = result;
+            wrapper.classList.add("active");
+          }
+          cancelBtn.addEventListener("click", function(){
+            img.src = "";
+            wrapper.classList.remove("active");
+          })
+          reader.readAsDataURL(file);
+        }
+        if(this.value){
+          let valueStore = this.value.match(regExp);
+          fileName.textContent = valueStore;
+        }
+      });
+</script>
+
+{% endblock %}

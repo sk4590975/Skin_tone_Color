@@ -1,0 +1,81 @@
+{% extends "home.html" %}
+{% load static %}
+{% block body_block %}
+
+
+
+
+    <section id="testimonials">
+    <div class="container">
+	 <h1 class="head">SkinTone</h1>
+	<!-- <p class="text-center">Subscribe For More Information</p>-->
+	 <div class="row">
+     <div class="col-md-6 text-center">
+		 <div class="profile">
+			 <h3>What we do?</h3>
+		 <blockquote>Have you ever wondered what skin complexion you have? Knowing what complexion type you fall under will help you find the right skincare products and shades. It will also help you take better care of your skin. Knowing your skin complexion type also
+         lets you know how you can protect yourself from sun exposure. So, how exactly is complexion typed and classified? The skin type system is a scale used to classify skin types. There are 3 classifications under the scale for complexion types. They
+         are as follows:
+		 </div>
+		 </div>
+	 <div class="col-md-6 text-center">
+	 <div class=" image1  ">
+     <img  src="{% static 'skintonedetection/images/skinrange.jpg'%}" alt="">
+
+	 </div>
+	 </div>
+ </div>
+  </div>
+</section>
+
+<section id="testimonials">
+<div class="container">
+  <div class="row">
+	 <div class="col-md-4 text-center ">
+	 <div class="profile know ">
+	 <img src="{% static 'skintonedetection/images/fair.jpg' %}"   class="user">
+   <h3>Fair Skin</h3>
+	 <blockquote>A fair skin type. People under this category have a fair or pale skin color. They often have freckles, too. Their skin also burns and peels when they get sun exposure. These people very rarely tan and usually have blue, gray, or green
+   eyes. Their natural hair color is typically blond. To give you a clearer picture, celebrities with type 2 skin type are Lucy Liu, Jennifer Annist.
+   .</blockquote>
+
+	 </div>
+	 </div>
+
+   <div class="col-md-4 text-center">
+	 <div class="profile ">
+	 <img src="{% static 'skintonedetection/images/med.jpg' %}"   class="user">
+   <h3>Mild Skin</h3>
+	 <blockquote>A mild skin type. This skin type is fair to beige with golden undertones. People with a mild skin type have a skin color that isn’t too dark but not too fair. They sometimes have freckles, their skin occasionally burns after sun exposure,
+   and sometimes even tan. Their eye color is usually hazel or light brown. Generally, their natural hair color is dark blond or light brown.</blockquote>
+
+	 </div>
+	 </div>
+   <div class="col-md-4 text-center">
+	 <div class="profile  ">
+	 <img src="{% static 'skintonedetection/images/dark.jpg' %}"   class="user">
+   <h3>Dark Skin</h3>
+	 <blockquote>A dark (brown to black) skin type.Dark skin is a type of human skin color that are rich in melanin pigments, especially eumelanin. This skin type is deeply pigmented brown/black. People with type 6 skin type never burns, and they always tan very darkly.<br> Their eye color is usually brownish-black or black. Also, their natural hair
+   color is black.</blockquote>
+
+	 </div>
+	 </div>
+ </div>
+  </div>
+</section>
+
+
+<!----
+    <h1 >  Human skin Colors</h1>
+    <div> Have you ever wondered what skin complexion you have? Knowing what complexion type you fall under will help you find the right skincare products and shades. It will also help you take better care of your skin. Knowing your skin complexion type also
+        lets you know how you can protect yourself from sun exposure. So, how exactly is complexion typed and classified? The skin type system is a scale used to classify skin types. There are 3 classifications under the scale for complexion types. They
+        are as follows:
+        <br>&nbsp;
+        <img src="{% static 'skintonedetection/images/skinrange.jpg' %}">
+        <li>Type 1 – Fair</li>
+        <li> Type 2 – Mild</li>
+        <li> Type 3 – Dark</li>
+        <br> Read on to learn more about these skin complexion types so you can determine which type you have,<br>
+        <a href="" class="stretched-link">Leran More</a>
+    </div>---->
+{% endblock %}
